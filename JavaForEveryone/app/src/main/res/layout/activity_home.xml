@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="last.project.javaforeveryone.controller.HomeActivity"
+    android:id="@+id/home_layout">
+
+    <RelativeLayout
+        android:id="@+id/fragment_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_img_intro_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/mid_margin"
+                android:background="@drawable/button_background_shape_circle"
+                android:src="@drawable/ic_button_intro" />
+
+            <TextView
+                android:id="@+id/title_intro_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_img_intro_home"
+                android:layout_centerHorizontal="true"
+                android:text="@string/stages_intro_txt"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/mid_txt" />
+
+            <ImageButton
+                android:id="@+id/btn_oop_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/btn_collections_home"
+                android:layout_marginEnd="@dimen/mid_margin"
+                android:layout_marginRight="@dimen/mid_margin"
+                android:background="@drawable/button_background_shape_square"
+                android:src="@drawable/ic_button_oop" />
+
+            <TextView
+                android:id="@+id/title_oop_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_oop_home"
+                android:layout_alignStart="@+id/btn_oop_home"
+                android:layout_below="@+id/btn_oop_home"
+                android:text="@string/stages_oop_txt"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/mid_txt" />
+
+            <ImageButton
+                android:id="@+id/btn_collections_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/title_intro_home"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginStart="@dimen/mid_margin"
+                android:layout_marginTop="@dimen/extra_big_margin"
+                android:background="@drawable/button_background_shape_square"
+                android:src="@drawable/ic_button_collection" />
+
+            <TextView
+                android:id="@+id/title_collection_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_collections_home"
+                android:layout_alignRight="@+id/btn_collections_home"
+                android:layout_below="@+id/btn_collections_home"
+                android:text="@string/stages_collections_txt"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/mid_txt" />
+
+            <ImageButton
+                android:id="@+id/btn_iteration_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription"
+                android:layout_alignEnd="@+id/title_collection_home"
+                android:layout_alignRight="@+id/title_collection_home"
+                android:layout_below="@+id/title_collection_home"
+                android:layout_marginLeft="@dimen/big_margin"
+                android:layout_marginStart="@dimen/big_margin"
+                android:layout_marginTop="@dimen/xx_big_margin"
+                android:background="@drawable/button_background_shape_circle"
+                android:src="@drawable/ic_button_iteration" />
+
+            <TextView
+                android:id="@+id/title_iteration_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/title_inner_classes_home"
+                android:layout_alignBottom="@+id/title_inner_classes_home"
+                android:layout_alignLeft="@+id/title_collection_home"
+                android:layout_alignStart="@+id/title_collection_home"
+                android:text="@string/stages_iterations_txt"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/mid_txt" />
+
+            <ImageButton
+                android:id="@+id/btn_inner_classes_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="ContentDescription"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/btn_iteration_home"
+                android:layout_marginEnd="@dimen/mid_margin"
+                android:layout_marginRight="@dimen/mid_margin"
+                android:background="@drawable/button_background_shape_circle"
+                android:src="@drawable/ic_button_inner" />
+
+            <TextView
+                android:id="@+id/title_inner_classes_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_inner_classes_home"
+                android:layout_alignRight="@+id/btn_inner_classes_home"
+                android:layout_below="@+id/btn_inner_classes_home"
+                android:text="Вътрешни\n Класове"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/last_test_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_inner_classes_home"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/extra_big_margin"
+                android:orientation="vertical"
+                android:visibility="invisible"
+                >
+
+                <ImageButton
+                    android:id="@+id/btn_last_test_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_background_shape_circle"
+                    android:src="@drawable/ic_last_test_btn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/title_last_test_txt"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/mid_txt" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:theme="@style/AppTheme.NavigationView"
+        app:headerLayout="@layout/nav_header"
+        app:itemTextColor="@color/colorWhite"
+        app:menu="@menu/drawer_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

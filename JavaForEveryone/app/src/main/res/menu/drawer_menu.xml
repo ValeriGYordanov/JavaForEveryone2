@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title="@string/general_txt">
+        <menu>
+            <group android:checkableBehavior="single"
+                android:id="@+id/nav_grp_general">
+                <item
+                    android:id="@+id/nav_home"
+                    android:icon="@drawable/ic_home_variant"
+                    android:title="@string/home_txt" />
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_account_circle"
+                    android:title="@string/profile_txt" />
+                <item
+                    android:id="@+id/nav_achievement"
+                    android:icon="@drawable/ic_trophy_award"
+                    android:title="@string/achievements_txt" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/social_txt">
+        <menu>
+            <group android:checkableBehavior="single"
+                android:id="@+id/nav_grp_community">
+                <item
+                    android:id="@+id/nav_friend"
+                    android:icon="@drawable/ic_account_plus"
+                    android:title="@string/invite_friend" />
+                <item
+                    android:id="@+id/nav_rank"
+                    android:icon="@drawable/ic_rank"
+                    android:title="Класация"/>
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/options">
+        <menu>
+            <group android:checkableBehavior="single"
+                android:id="@+id/nav_grp_options">
+                <item
+                    android:id="@+id/nav_logout"
+                    android:actionViewClass="android.support.design.widget.FloatingActionButton"
+                    android:icon="@drawable/ic_logout_variant"
+                    android:title="@string/log_out"
+                    />
+            </group>
+        </menu>
+    </item>
+
+</menu>

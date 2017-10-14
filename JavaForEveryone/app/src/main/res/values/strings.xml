@@ -1,0 +1,94 @@
+<resources>
+    <!-- Application Name -->
+    <string name="app_name">Java За Всеки 2</string>
+
+    <!-- Main Atributes Text -->
+    <string name="username_caps_txt">ПОТРЕБИТЕЛ</string>
+    <string name="password_caps_txt">ПАРОЛА</string>
+    <string name="sign_in_caps_txt">ВЛЕЗ</string>
+    <string name="sign_in_tab_caps_txt">ВХОД</string>
+    <string name="register_caps_txt">РЕГИСТРАЦИЯ</string>
+    <string name="e_mail_caps_txt">ПОЩА</string>
+    <string name="profile_txt">Профил</string>
+    <string name="home_txt">Начало</string>
+    <string name="achievements_txt">Постижения</string>
+    <string name="possitive_txt">Да</string>
+    <string name="negative_txt">Не</string>
+
+    <!-- Facebook APP ID and Protocol -->
+    <string name="facebook_app_id">135188890539799</string>
+    <string name="fb_login_protocol_scheme">fb135188890539799</string>
+
+    <!-- Navigation Drawer Commands -->
+    <string name="open_str">Open</string>
+    <string name="close_str">Close</string>
+    <!-- Navigation Drawer Options/Text -->
+    <string name="general_txt">Основно</string>
+    <string name="social_txt">Общност</string>
+    <string name="invite_friend">Покани Приятел</string>
+    <string name="rank">Класация</string>
+    <string name="options">Опции</string>
+    <string name="log_out">Излез</string>
+    <string name="points_txt">Точки</string>
+
+    <!-- Stage Titles -->
+    <string name="stages_intro_txt">Въведение</string>
+    <string name="stages_oop_txt">О.О.П.</string>
+    <string name="stages_collections_txt">Колекции</string>
+    <string name="stages_iterations_txt">Обхождане</string>
+    <string name="title_last_test_txt">Последен Тест</string>
+    <string name="stages_inner_classes_txt">Вътрешни Класове</string>
+    <string name="last_test_txt">Финален тест</string>
+
+    <!-- Exam Buttons Text -->
+    <string name="submit_txt">Предай</string>
+    <string name="forward_txt">Напред</string>
+
+    <!-- Achievement Info -->
+    <string name="achievement_first_test_title">Първи взет тест</string>
+    <string name="achievement_first_test_desc">При първи успешен тест</string>
+    <integer name="achievement_first_test_pts">10</integer>
+
+    <string name="achievement_talent_title">ИТ талант</string>
+    <string name="achievement_talent_desc">При взет финален тест без грешка</string>
+    <integer name="achievement_talent_pts">100</integer>
+
+    <string name="achievement_machine_title">Тест машина</string>
+    <string name="achievement_machine_desc">При взет междинен тест без грешка</string>
+    <integer name="achievement_machine_pts">10</integer>
+
+    <string name="achievement_almost_title">Почти се справи</string>
+    <string name="achievement_almost_desc">При първи взет тест с по-малко от 100/100 точки (губиш правото за Achievement Изрод)</string>
+    <integer name="achievement_almost_pts">5</integer>
+
+    <string name="achievement_freak_title">Изрод</string>
+    <string name="achievement_freak_desc">При взети всички междинни тестове без грешка</string>
+    <integer name="achievement_freak_pts">25</integer>
+
+    <string name="achievement_fail_title">Най-голям провал</string>
+    <string name="achievement_fail_desc">При междинен тест без верен отговор</string>
+    <integer name="achievement_fail_pts">-25</integer>
+
+    <!-- Extra Strings -->
+    <string name="txt_check_net_connection">Свързване с интернет…</string>
+    <string name="reject_test_txt">Откажи се</string>
+    <string name="greeting_txt">Добре дошъл</string>
+    <string name="unverified_mail">Потвърдете вашата поща</string>
+    <string name="empty_fields">Попълнете полетата</string>
+
+    <!-- Errors Text -->
+    <string name="username_error_requirements">Въведи поне 3 символа!</string>
+    <string name="password_error_requirements">Въведи поне 6 символа, само цифри и букви на латиница!</string>
+    <string name="email_error_requirements">Въведи валиден имейл!</string>
+    <string name="invalid_mail_or_pass">Невалидна поща или парола</string>
+    <string name="rankList">Класация</string>
+    <string name="SuccsessAch">Ти успешно взе постижението</string>
+    <string name="cancel_change_profile">Промените не са запазени...</string>
+    <string name="deny_dialog_not_ready_yet">Още не си готов</string>
+    <string name="deny_dialog_previous_stage">Все още не сте преминали предишен етап.</string>
+    <string name="ok_txt">Добре</string>
+    <string name="rank_user_txt">Потребител</string>
+    <string name="rank_stage_txt">Ниво</string>
+    <string name="rank_pts_txt">Точки</string>
+
+</resources>

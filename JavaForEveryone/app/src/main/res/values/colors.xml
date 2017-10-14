@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme colors -->
+    <color name="colorPrimary">#4e0bde</color>
+    <color name="colorPrimaryDark">#31078b</color>
+    <color name="colorAccent">#de710b</color>
+
+    <!-- Main colors -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+
+    <!-- Transparent colors -->
+    <color name="transperent">#00ffffff</color>
+    <color name="trasperent_light">#5cffffff</color>
+    <color name="transparent_dark">#83000000</color>
+    <color name="transparent_green">#8f438100</color>
+    <color name="transparent_primaryDark">#dc31078b</color>
+    <color name="transparent_primary">#c84e0bde</color>
+    <color name="colorRed">#d274000d</color>
+
+    <!-- Transition colors -->
+    <color name="colorPrimaryTransition">#5f673ab7</color>
+    <color name="colorAccentTransition">#5f009688</color>
+    <color name="colorBlackTransition">#a0000000</color>
+
+
+</resources>

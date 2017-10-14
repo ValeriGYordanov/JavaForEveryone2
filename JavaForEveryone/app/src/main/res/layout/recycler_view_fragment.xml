@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_final_app">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler_view"
+        android:layout_weight="18"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_finish_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_txt"
+            android:textSize="@dimen/small_txt"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/ic_button_submit"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+        <Button
+            android:id="@+id/btn_give_up_test"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/reject_test_txt"
+            android:textSize="@dimen/small_txt"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/ic_btn_reject"
+            android:layout_gravity="center"/>
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

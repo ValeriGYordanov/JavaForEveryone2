@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ThemeOverlay.AppCompat.Dark"
+    android:layout_width="match_parent"
+    android:layout_height="172dp"
+    android:background="@color/bodyTextColor"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.2"
+        android:scaleType="fitXY"
+        android:src="@drawable/mini_bg_start_blurr"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/nav_head_img"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/min_margin"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_menu_gallery"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/nav_head_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nav_head_points_tag"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+
+        android:layout_marginBottom="28dp"
+        android:hint="@string/username_caps_txt"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/small_txt" />
+
+    <TextView
+        android:id="@+id/nav_head_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/min_margin"
+        android:layout_marginLeft="@dimen/min_margin"
+        android:layout_marginStart="@dimen/min_margin"
+
+        android:hint="@string/e_mail_caps_txt"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/small_txt" />
+
+    <TextView
+        android:id="@+id/nav_head_points_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nav_head_username"
+        android:layout_alignStart="@+id/nav_head_username"
+        android:layout_centerVertical="true"
+
+        android:hint="@string/points_txt"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/small_txt" />
+
+    <TextView
+        android:id="@+id/nav_head_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/nav_head_points_tag"
+        android:layout_alignBottom="@+id/nav_head_points_tag"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/mid_margin"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:textSize="@dimen/small_txt" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</RelativeLayout>

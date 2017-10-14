@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="last.project.javaforeveryone.utility.SplashScreen">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ContentDescription"
+        android:src="@drawable/mini_bg_start_blurr"
+        android:scaleType="fitXY"
+        android:alpha="0.6"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_check_net_connection"
+        android:textSize="50sp"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/extra_big_margin"
+        android:textColor="@color/colorWhite"/>
+
+    <com.ldoublem.loadingviewlib.view.LVGhost
+        android:id="@+id/progress_ghost_main"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>

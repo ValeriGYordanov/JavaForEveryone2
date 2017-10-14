@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Text size -->
+    <dimen name="mid_txt">23sp</dimen>
+    <dimen name="big_txt">40sp</dimen>
+    <dimen name="small_txt">18sp</dimen>
+
+    <!-- App Margin size -->
+    <dimen name="extra_big_margin">50dp</dimen>
+    <dimen name="xx_big_margin">100dp</dimen>
+    <dimen name="xxx_big_margin">150dp</dimen>
+    <dimen name="big_margin">20dp</dimen>
+    <dimen name="mid_margin">10dp</dimen>
+    <dimen name="min_margin">5dp</dimen>
+</resources>
