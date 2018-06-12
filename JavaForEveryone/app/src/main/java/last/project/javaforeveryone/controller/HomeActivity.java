@@ -6,6 +6,8 @@ import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.net.Uri;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.widget.DrawerLayout;
@@ -40,10 +42,17 @@ import com.google.firebase.database.ValueEventListener;
 import last.project.javaforeveryone.R;
 import last.project.javaforeveryone.fragment.AchievementFragment;
 import last.project.javaforeveryone.fragment.ExamFragment;
-import last.project.javaforeveryone.iface.FragmentChangeListener;
-import last.project.javaforeveryone.fragments.StageFragment;
-import last.project.javaforeveryone.utilities.User;
-import last.project.javaforeveryone.utilities.Utils;
+import last.project.javaforeveryone.fragment.RankListFragment;
+import last.project.javaforeveryone.iface.IFragmentChangeListener;
+import last.project.javaforeveryone.fragment.StageFragment;
+
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.yarolegovich.lovelydialog.LovelyStandardDialog;
+
+import last.project.javaforeveryone.fragment.UserProfileFragment;
+import last.project.javaforeveryone.model.UserModel;
+import last.project.javaforeveryone.utility.Utils;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, IFragmentChangeListener {
 
@@ -115,8 +124,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
 
-        navigationView = (NavigationView)findViewById(R.id.nav_view);
-        drawerLayout = (DrawerLayout) findViewById(R.id.seller_drow_layout);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = (DrawerLayout) findViewById(R.id.home_layout);
+
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        drawerLayout = (DrawerLayout) findViewById(R.id.home_layout);
         navHeaderView = navigationView.getHeaderView(0);
         emailNavDrawer = (TextView) navHeaderView.findViewById(R.id.nav_head_mail);
         usernameNavDrawer = (TextView) navHeaderView.findViewById(R.id.nav_head_username);
@@ -385,8 +397,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 finish();
                 break;
             case profile:
-                Intent intent1 = new Intent(HomeActivity.this,UpdateProfile.class);
-                startActivityForResult(intent1, CHANGE_PROFILE);
+                getSupportActionBar().setTitle(R.string.profile_txt);
+                currentFragment = new UserProfileFragment();
+                Bundle bundle = new Bundle();
+                String type = checkUserLogin(firebaseUser);
+                bundle.putString("userType", type);
+                bundle.putInt("userPts", currentUserModel.getAchPts());
+                bundle.putInt("userStage", currentUserModel.getStagesID());
+                bundle.putString("userImage", currentUserModel.getImage());
+                bundle.putString("username", currentUserModel.getName());
+                currentFragment.setArguments(bundle);
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.fragment_place, currentFragment)
+                        .commit();
+
+                drawerLayout.closeDrawers();
                 break;
             case home:
                 getSupportActionBar().setTitle(R.string.home_txt);
@@ -605,4 +631,32 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         }
 
     }
+
+    /**
+     * A Dialog showing the user has not reached
+     * the stage yet, and must finish the previous
+     * stage/s first.
+     */
+    private void showDenyDialog(){
+        new LovelyStandardDialog(HomeActivity.this)
+                .setTopColorRes(R.color.colorRed)
+                .setButtonsColorRes(R.color.colorAccent)
+                .setIcon(R.drawable.ic_ghost_exit)
+                .setTitle(R.string.deny_dialog_not_ready_yet)
+                .setTitleGravity(Gravity.CENTER)
+                .setMessage(R.string.deny_dialog_previous_stage)
+                .setNeutralButton(R.string.ok_txt, null)
+                .show();
+    }
+
+    @Override
+    public void replaceFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        android.support.v4.app.FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_place, fragment, fragment.toString());
+        fragmentTransaction.addToBackStack(fragment.toString());
+        fragmentTransaction.commit();
+    }
+
 }
+

@@ -217,7 +217,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         });
     }
 
-        callbackManager = CallbackManager.Factory.create();
+    /**
+     * Sets all the onClickListeners for the buttons
+     * in the current Activity.
+     */
+    private void buttonClickers(){
 
         llSignin.setOnClickListener(this);
         llSignup.setOnClickListener(this);
